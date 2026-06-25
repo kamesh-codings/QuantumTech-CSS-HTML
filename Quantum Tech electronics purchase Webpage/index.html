@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Tech | Computer Parts</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <i class="fa-solid fa-bolt"></i>
+      Quantum<span>Tech</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Components</a>
+      <a href="#products">Products</a>
+      <a href="#deals">Deals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="navbar-search-wrapper">
+      <form id="search-form" class="search-form" role="search" autocomplete="off">
+        <input id="search-input" type="search" placeholder="Search components..." aria-label="Search products" />
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div id="search-suggestions" class="search-suggestions hidden" role="listbox" aria-label="Search suggestions"></div>
+    </div>
+
+    <div class="nav-icons">
+      <a href="#" class="auth-link" id="auth-btn">Sign In</a>
+      <div class="profile-wrapper">
+        <a href="#" class="profile-btn hidden" id="profile-btn"><i class="fa-solid fa-user"></i> <span class="profile-name"></span></a>
+        <div id="profile-dropdown" class="profile-dropdown hidden" aria-hidden="true">
+          <div class="profile-card">
+            <strong id="profile-name-display"></strong>
+            <div class="small muted" id="profile-email-display"></div>
+          </div>
+          <a href="#" id="profile-myaccount">My Profile</a>
+          <a href="#" id="profile-orders">My Orders</a>
+          <button id="profile-signout" class="btn btn-secondary">Sign Out</button>
+        </div>
+      </div>
+      <a href="#" class="wishlist-link"><i class="fa-regular fa-heart"></i><span class="wishlist-count">0</span></a>
+      <a href="#" class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
+      </a>
+      <a href="#" class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-tag">⚡ NEXT-GEN COMPUTER COMPONENTS</p>
+
+      <h1>Build Your <span>Ultimate</span><br>PC Setup.</h1>
+
+      <p class="hero-description">
+        Explore powerful processors, graphics cards, gaming accessories,
+        storage devices, and more — all in one place.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Shop Components</a>
+        <a href="#categories" class="btn btn-secondary">Explore Categories</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <h3>10K+</h3>
+          <p>Happy Customers</p>
+        </div>
+
+        <div>
+          <h3>500+</h3>
+          <p>Tech Products</p>
+        </div>
+
+        <div>
+          <h3>24/7</h3>
+          <p>Expert Support</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="glow-circle"></div>
+      <img
+        src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=80"
+        alt="Gaming PC Setup"
+      >
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section categories-section" id="categories">
+    <div class="section-heading">
+      <p>EXPLORE COMPONENTS</p>
+      <h2>Shop by <span>Category</span></h2>
+    </div>
+    <div class="category-grid" id="category-grid">
+      <!-- Categories will be rendered here by JS -->
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section products-section" id="products">
+    <div class="section-heading">
+      <p>TOP PERFORMANCE</p>
+      <h2 id="product-section-title">Trending <span>Products</span></h2>
+    </div>
+
+    <div class="product-grid" id="product-grid">
+      <!-- Products will be rendered here by JS -->
+    </div>
+  </section>
+
+  <!-- Deal Banner -->
+  <section class="deal-banner" id="deals">
+    <div>
+      <p>LIMITED TIME OFFER</p>
+      <h2>⚡ Mega Tech Sale</h2>
+      <h3>Up to <span>40% OFF</span> on selected PC components.</h3>
+    </div>
+
+    <a href="#products" class="btn btn-primary">Shop Now</a>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-section">
+    <div class="section-heading">
+      <p>WHY QUANTUM TECH?</p>
+      <h2>Built for <span>Tech Enthusiasts</span></h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Fast Delivery</h3>
+        <p>Quick and secure delivery for your tech products.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Genuine Products</h3>
+        <p>Trusted products from reliable technology brands.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-lock"></i>
+        <h3>Secure Payment</h3>
+        <p>Safe checkout experience with protected payments.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>Expert Support</h3>
+        <p>Get help from our dedicated tech support team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="contact">
+    <div>
+      <p>STAY UPDATED</p>
+      <h2>Get the latest tech deals ⚡</h2>
+      <span>Receive product launches, gaming offers, and PC-building tips.</span>
+    </div>
+
+    <form>
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Get Notified</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-bolt"></i>
+        Quantum<span>Tech</span>
+      </a>
+      <p>Powering your next-level PC experience.</p>
+      <p>Contact: <a href="tel:044-12345678">044-12345678</a></p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Components</a>
+      <a href="#products">Products</a>
+      <a href="#deals">Deals</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <div class="footer-disclaimer">
+    <p>This website is a CSS practice project created by a web development learner. It is designed only to demonstrate frontend design, layout, and styling skills. All product names, prices, offers, and content shown are for educational and demonstration purposes only. This is not a real e-commerce website, and no actual purchases or transactions can be made through it.</p>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 Quantum Tech. Designed for modern PC builders.</p>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="product-modal hidden">
+    <div class="product-modal-content auth-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="auth-forms">
+        <div class="auth-tabs">
+          <button id="show-login" class="active">Login</button>
+          <button id="show-register">Register</button>
+        </div>
+        <form id="login-form" class="auth-form">
+          <input id="login-username" placeholder="Username" required>
+          <input id="login-password" type="password" placeholder="Password" required>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <form id="register-form" class="auth-form hidden">
+          <input id="reg-username" placeholder="Choose username" required>
+          <input id="reg-password" type="password" placeholder="Choose password" required>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+        <div id="auth-msg" style="color:var(--muted-text); margin-top:10px;"></div>
+      </div>
+    </div>
+  </div>
+  <div id="panel-modal" class="product-modal hidden">
+    <div class="product-modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="panel-content">
+        <h3 id="panel-title">Panel</h3>
+        <div id="panel-body" class="panel-body"></div>
+      </div>
+    </div>
+  </div>
+  <div id="product-modal" class="product-modal hidden">
+    <div class="product-modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-left">
+        <div class="modal-image"><img src="" alt=""></div>
+      </div>
+      <div class="modal-right">
+        <p class="product-category"></p>
+        <h3 class="product-title"></h3>
+        <div class="rating"></div>
+        <p class="product-desc">High quality product.</p>
+        <h4 class="product-price"></h4>
+        <div class="modal-actions">
+          <button class="add-to-cart-modal btn btn-primary">Add to Cart</button>
+          <button class="wishlist-modal btn btn-secondary">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="disclaimer-modal" class="product-modal hidden">
+    <div class="product-modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="disclaimer-content">
+        <h3>Important Notice</h3>
+        <div class="disclaimer-text">
+          <p>This website is a CSS practice project created by a web development learner. It is designed only to demonstrate frontend design, layout, and styling skills. All product names, prices, offers, and content shown are for educational and demonstration purposes only. This is not a real e-commerce website, and no actual purchases or transactions can be made through it.</p>
+        </div>
+        <div style="margin-top:12px;"><button id="disclaimer-ok" class="btn btn-primary">I Understand</button></div>
+      </div>
+    </div>
+  </div>
+
+  <script> 
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      navLinks.classList.toggle('active');
+    });
+
+    const categories = [
+      { id: 'all', name: 'All Products', image: 'images/gaming accessories.png', desc: 'View everything' },
+      { id: 'PROCESSOR', name: 'Processors', image: 'images/processor.png', desc: 'High-speed CPUs' },
+      { id: 'GRAPHICS CARD', name: 'Graphics Cards', image: 'images/graphics card.png', desc: 'Powerful GPUs' },
+      { id: 'MEMORY', name: 'RAM', image: 'images/ram.png', desc: 'Fast memory kits' },
+      { id: 'STORAGE', name: 'Storage', image: 'images/ssd.jpg', desc: 'SSD and HDD' },
+      { id: 'MOTHERBOARD', name: 'Motherboards', image: 'images/motherboard.webp', desc: 'Reliable boards' },
+      { id: 'MONITOR', name: 'Monitors', image: 'images/monitors.jpg', desc: 'High refresh rate' },
+      { id: 'ACCESSORY', name: 'Accessories', image: 'images/keyboard.jpg', desc: 'Keyboards & Mice' }
+    ];
+
+    const products = [
+      { id: 1, name: 'RTX Gaming Graphics Card', category: 'GRAPHICS CARD', price: '₹49,999', rating: 5, reviews: 124, image: 'images/graphics card.png', badge: 'HOT', trending: true },
+      { id: 2, name: 'Quantum Core i7 Processor', category: 'PROCESSOR', price: '₹28,499', rating: 5, reviews: 98, image: 'images/processor.png', badge: 'NEW', trending: true },
+      { id: 3, name: '16GB RGB RAM Kit', category: 'MEMORY', price: '₹8,999', rating: 5, reviews: 210, image: 'images/ram.png', badge: 'SALE', trending: true },
+      { id: 4, name: 'Mechanical Gaming Keyboard', category: 'ACCESSORY', price: '₹5,499', rating: 5, reviews: 156, image: 'images/keyboard.jpg', badge: '', trending: true },
+      { id: 5, name: 'Pro Gaming Headset & Mouse', category: 'ACCESSORY', price: '₹7,999', rating: 5, reviews: 84, image: 'images/gaming accessories.png', badge: '', trending: true },
+      { id: 6, name: 'UltraWide 144Hz Monitor', category: 'MONITOR', price: '₹24,999', rating: 5, reviews: 312, image: 'images/monitors.jpg', badge: 'HOT', trending: true },
+      { id: 7, name: 'Z690 Gaming Motherboard', category: 'MOTHERBOARD', price: '₹18,500', rating: 5, reviews: 145, image: 'images/motherboard.webp', badge: 'NEW', trending: true },
+      { id: 8, name: '1TB NVMe M.2 SSD', category: 'STORAGE', price: '₹6,499', rating: 5, reviews: 410, image: 'images/ssd.jpg', badge: '', trending: true },
+      { id: 9, name: 'Ryzen 9 5900X', category: 'PROCESSOR', price: '₹35,000', rating: 5, reviews: 300, image: 'images/processor.png', badge: '', trending: false },
+      { id: 10, name: 'RTX 4090 GPU', category: 'GRAPHICS CARD', price: '₹1,50,000', rating: 5, reviews: 50, image: 'images/graphics card.png', badge: 'NEW', trending: false },
+      { id: 11, name: '32GB DDR5 RAM', category: 'MEMORY', price: '₹14,999', rating: 4, reviews: 120, image: 'images/ram.png', badge: '', trending: false },
+      { id: 12, name: '2TB SATA SSD', category: 'STORAGE', price: '₹8,999', rating: 4, reviews: 250, image: 'images/ssd.jpg', badge: 'SALE', trending: false },
+      { id: 13, name: 'B550 Motherboard', category: 'MOTHERBOARD', price: '₹12,000', rating: 4, reviews: 80, image: 'images/motherboard.webp', badge: '', trending: false },
+      { id: 14, name: '27" 4K Monitor', category: 'MONITOR', price: '₹32,000', rating: 5, reviews: 190, image: 'images/monitors.jpg', badge: '', trending: false },
+      { id: 15, name: 'Wireless Gaming Mouse', category: 'ACCESSORY', price: '₹4,500', rating: 4, reviews: 400, image: 'images/gaming accessories.png', badge: '', trending: false },
+      { id: 16, name: 'Core i9 13900K Processor', category: 'PROCESSOR', price: '₹48,999', rating: 5, reviews: 165, image: 'images/intel-cpu.svg', badge: 'NEW', trending: false },
+      { id: 17, name: 'Radeon RX 7800 XT GPU', category: 'GRAPHICS CARD', price: '₹69,999', rating: 5, reviews: 94, image: 'images/radeon-gpu.svg', badge: 'HOT', trending: false },
+      { id: 18, name: '64GB DDR5 RAM Kit', category: 'MEMORY', price: '₹21,499', rating: 5, reviews: 130, image: 'images/ddr5-ram.svg', badge: 'NEW', trending: false },
+      { id: 19, name: '4TB NVMe SSD', category: 'STORAGE', price: '₹16,999', rating: 5, reviews: 102, image: 'images/nvme-ssd.svg', badge: 'SALE', trending: false },
+      { id: 20, name: 'X570 Gaming Motherboard', category: 'MOTHERBOARD', price: '₹23,999', rating: 5, reviews: 88, image: 'images/x570-motherboard.svg', badge: 'NEW', trending: false }
+    ];
+
+    const categoryGrid = document.getElementById('category-grid');
+    const productGrid = document.getElementById('product-grid');
+    const productSectionTitle = document.getElementById('product-section-title');
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+    const searchSuggestions = document.getElementById('search-suggestions');
+
+    function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function hideSearchSuggestions(){ if(searchSuggestions){ searchSuggestions.classList.add('hidden'); searchSuggestions.innerHTML = ''; } }
+
+    function showSearchSuggestions(list, query){
+      if(!searchSuggestions) return;
+      searchSuggestions.innerHTML = '';
+      searchSuggestions.classList.remove('hidden');
+      if(!list || list.length === 0){
+        const noDiv = document.createElement('div');
+        noDiv.className = 'suggestion-empty';
+        noDiv.innerHTML = `<div>No product found for "<strong>${escapeHtml(query)}</strong>"</div>`;
+        searchSuggestions.appendChild(noDiv);
+        // show trending as fallback
+        const trending = products.filter(p => p.trending).slice(0,6);
+        trending.forEach(p => {
+          const it = document.createElement('div');
+          it.className = 'search-suggestion-item';
+          it.dataset.id = p.id;
+          it.innerHTML = `<img src="${p.image}" alt="${escapeHtml(p.name)}"><div><strong>${escapeHtml(p.name)}</strong><div class="small muted">${p.price}</div></div>`;
+          it.addEventListener('click', (e) => { e.stopPropagation(); hideSearchSuggestions(); openProductDetail(p.id); });
+          searchSuggestions.appendChild(it);
+        });
+        return;
+      }
+      list.slice(0,6).forEach(p => {
+        const it = document.createElement('div');
+        it.className = 'search-suggestion-item';
+        it.dataset.id = p.id;
+        it.innerHTML = `<img src="${p.image}" alt="${escapeHtml(p.name)}"><div><strong>${escapeHtml(p.name)}</strong><div class="small muted">${p.price}</div></div>`;
+        it.addEventListener('click', (e) => { e.stopPropagation(); hideSearchSuggestions(); openProductDetail(p.id); });
+        searchSuggestions.appendChild(it);
+      });
+    }
+
+    if (searchForm) {
+      searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        hideSearchSuggestions();
+        performSearch(searchInput.value);
+      });
+    }
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = (searchInput.value || '').trim();
+        if (!q){ hideSearchSuggestions(); renderProducts('all'); return; }
+        const qn = normalizeText(q);
+        const results = products.filter(p => {
+          const combined = normalizeText(p.name + ' ' + p.category);
+          if (combined.includes(qn)) return true;
+          const tokens = (p.name + ' ' + p.category).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+          const normalizedTokens = tokens.map(t => t.replace(/[^a-z0-9]/g, ''));
+          if (normalizedTokens.some(t => t.startsWith(qn))) return true;
+          if (isSubsequence(qn, combined)) return true;
+          return false;
+        });
+        showSearchSuggestions(results, q);
+      });
+      searchInput.addEventListener('keydown', (e) => { if(e.key === 'Escape') hideSearchSuggestions(); });
+      document.addEventListener('click', (e) => { if(!e.target.closest('.hero-search-wrapper')) hideSearchSuggestions(); });
+    }
+
+    function renderCategories() {
+      categoryGrid.innerHTML = '';
+      categories.forEach(cat => {
+        const card = document.createElement('div');
+        card.className = 'category-card';
+        card.dataset.category = cat.id;
+        card.innerHTML = `
+          <img src="${cat.image}" alt="${cat.name}">
+          <h3>${cat.name}</h3>
+          <p>${cat.desc}</p>
+        `;
+        card.addEventListener('click', () => {
+          document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          renderProducts(cat.id);
+          document.getElementById('products').scrollIntoView();
+        });
+        categoryGrid.appendChild(card);
+      });
+    }
+
+    function renderProducts(categoryId = 'trending') {
+      productGrid.innerHTML = '';
+      let filteredProducts = [];
+
+      if (categoryId === 'trending') {
+        filteredProducts = products.filter(p => p.trending);
+        productSectionTitle.innerHTML = 'Trending <span>Products</span>';
+      } else if (categoryId === 'all') {
+        filteredProducts = products;
+        productSectionTitle.innerHTML = 'All <span>Products</span>';
+      } else {
+        filteredProducts = products.filter(p => p.category === categoryId);
+        const catName = categories.find(c => c.id === categoryId)?.name || 'Products';
+        productSectionTitle.innerHTML = `${catName} <span>Products</span>`;
+      }
+
+      if (filteredProducts.length === 0) {
+        productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted-text);">No products found in this category.</p>';
+        return;
+      }
+
+      filteredProducts.forEach(prod => {
+        const badgeHtml = prod.badge ? `<span class="product-badge ${prod.badge === 'NEW' ? 'new-badge' : prod.badge === 'SALE' ? 'sale-badge' : ''}">${prod.badge}</span>` : '';
+        const article = document.createElement('article');
+        article.className = 'product-card';
+        article.dataset.id = prod.id;
+        article.innerHTML = `
+          ${badgeHtml}
+          <button class="product-wishlist" data-id="${prod.id}" title="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image-box">
+            <img src="${prod.image}" alt="${prod.name}">
+          </div>
+          <div class="product-info">
+            <p class="product-category">${prod.category}</p>
+            <h3>${prod.name}</h3>
+            <div class="rating">
+              <span>${'★'.repeat(prod.rating)}${'☆'.repeat(5 - prod.rating)}</span>
+              <small>(${prod.reviews} reviews)</small>
+            </div>
+            <div class="product-bottom">
+              <h4>${prod.price}</h4>
+              <div class="product-actions">
+                <button class="add-to-cart" data-id="${prod.id}"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="buy-now btn btn-primary" data-id="${prod.id}">Buy</button>
+              </div>
+            </div>
+          </div>
+        `;
+        productGrid.appendChild(article);
+
+        // Add event listeners (defensive)
+        const addBtn = article.querySelector('.add-to-cart');
+        if (addBtn) addBtn.addEventListener('click', (e) => { e.stopPropagation(); addToCart(prod.id); });
+
+        const wishBtn = article.querySelector('.product-wishlist');
+        if (wishBtn) {
+          // set initial heart state based on current user wishlist
+          try {
+            const userW = currentUser ? getUserWishlist() : [];
+            if (userW && userW.includes(prod.id)) wishBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+            else wishBtn.innerHTML = '<i class="fa-regular fa-heart"></i>';
+          } catch (e) { /* ignore */ }
+          wishBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleWishlist(prod.id, wishBtn); });
+        }
+
+        const buyBtn = article.querySelector('.buy-now');
+        if (buyBtn) buyBtn.addEventListener('click', (e) => { e.stopPropagation(); showDisclaimer(prod.id); });
+
+        article.addEventListener('click', () => openProductDetail(prod.id));
+      });
+    }
+
+    // Cart, Wishlist & Auth logic
+    const cart = [];
+    const wishlist = new Set();
+    const cartCountEl = document.querySelector('.cart-icon span');
+    const wishlistCountEl = document.querySelector('.wishlist-link .wishlist-count');
+    const profileBtn = document.getElementById('profile-btn');
+    const profileDropdown = document.getElementById('profile-dropdown');
+    const profileNameDisplay = document.getElementById('profile-name-display');
+
+    // simple auth using localStorage
+    let currentUser = localStorage.getItem('qt_currentUser') || null;
+
+    function getUsers(){ return JSON.parse(localStorage.getItem('qt_users') || '[]'); }
+    function saveUsers(users){ localStorage.setItem('qt_users', JSON.stringify(users)); }
+
+    function setCurrentUser(username){ currentUser = username; localStorage.setItem('qt_currentUser', username); updateAuthUI(); updateCartCount(); updateWishlistCount(); }
+    function clearCurrentUser(){ currentUser = null; localStorage.removeItem('qt_currentUser'); updateAuthUI(); updateCartCount(); updateWishlistCount(); }
+
+    function getUserCart(){ if(!currentUser) return []; return JSON.parse(localStorage.getItem('cart_' + currentUser) || '[]'); }
+    function saveUserCart(arr){ if(!currentUser) return; localStorage.setItem('cart_' + currentUser, JSON.stringify(arr)); }
+    function getUserWishlist(){ if(!currentUser) return []; return JSON.parse(localStorage.getItem('wishlist_' + currentUser) || '[]'); }
+    function saveUserWishlist(arr){ if(!currentUser) return; localStorage.setItem('wishlist_' + currentUser, JSON.stringify(arr)); }
+
+    function updateCartCount(){
+      let count = 0;
+      if(currentUser){ count = getUserCart().length; }
+      else { count = cart.length; }
+      if(cartCountEl) cartCountEl.textContent = count;
+    }
+
+    function updateWishlistCount(){
+      let count = 0;
+      if(currentUser){ count = getUserWishlist().length; }
+      if(wishlistCountEl) wishlistCountEl.textContent = count;
+    }
+
+    function addToCart(id){
+      if(!currentUser){ showAuthModal(); return; }
+      const p = products.find(x => x.id === id);
+      if(!p) return;
+      const c = getUserCart();
+      c.push(p);
+      saveUserCart(c);
+      updateCartCount();
+      if(activePanelType === 'cart') renderPanel('cart');
+      alert(p.name + ' added to your cart');
+    }
+
+    function removeFromCart(id){
+      if(!currentUser) return;
+      const c = getUserCart().filter(item => item.id !== id);
+      saveUserCart(c);
+      updateCartCount();
+      if(activePanelType === 'cart') renderPanel('cart');
+    }
+
+    let activePanelType = null;
+
+    function toggleWishlist(id, btn){
+      if(!currentUser){ showAuthModal(); return; }
+      let w = getUserWishlist();
+      if(w.includes(id)){
+        w = w.filter(x => x !== id);
+        if(btn) btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
+        saveUserWishlist(w);
+        alert('Removed from wishlist');
+      } else {
+        w.push(id);
+        if(btn) btn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+        saveUserWishlist(w);
+        alert('Added to wishlist');
+      }
+      updateWishlistCount();
+      updateWishlistIcons();
+      if(activePanelType === 'wishlist') renderPanel('wishlist');
+    }
+
+    function removeFromWishlist(id){
+      if(!currentUser) return;
+      const w = getUserWishlist().filter(x => x !== id);
+      saveUserWishlist(w);
+      updateWishlistCount();
+      updateWishlistIcons();
+      if(activePanelType === 'wishlist') renderPanel('wishlist');
+    }
+
+    function updateWishlistIcons(){
+      document.querySelectorAll('.product-wishlist').forEach(btn => {
+        const id = Number(btn.dataset.id);
+        if (!id) return;
+        const currentWishlist = currentUser ? getUserWishlist() : [];
+        btn.innerHTML = currentWishlist.includes(id) ? '<i class="fa-solid fa-heart"></i>' : '<i class="fa-regular fa-heart"></i>';
+      });
+    }
+
+    function normalizeCartItems(items){
+      return (items || []).map(item => {
+        if (typeof item === 'number') {
+          return products.find(p => p.id === item) || null;
+        }
+        if (item && typeof item === 'object' && item.id) {
+          return products.find(p => p.id === item.id) || item;
+        }
+        return null;
+      }).filter(Boolean);
+    }
+
+    function openProductDetail(id){
+      const product = products.find(p => p.id === id);
+      if(!product) return;
+      const modal = document.getElementById('product-modal');
+      if(!modal) return;
+      modal.dataset.currentId = id;
+      modal.querySelector('.modal-image img').src = product.image;
+      modal.querySelector('.modal-image img').alt = product.name;
+      modal.querySelector('.product-category').textContent = product.category;
+      modal.querySelector('.product-title').textContent = product.name;
+      modal.querySelector('.rating').innerHTML = `<span>${'★'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}</span><small>(${product.reviews} reviews)</small>`;
+      modal.querySelector('.product-desc').textContent = `Experience the power of ${product.name} with top-tier performance for gaming and productivity.`;
+      modal.querySelector('.product-price').textContent = product.price;
+      const addCartBtn = modal.querySelector('.add-to-cart-modal');
+      const wishBtn = modal.querySelector('.wishlist-modal');
+      if(addCartBtn){
+        addCartBtn.onclick = (e) => { e.preventDefault(); addToCart(id); };
+      }
+      if(wishBtn){
+        const currentWishlist = currentUser ? getUserWishlist() : [];
+        wishBtn.textContent = currentWishlist.includes(id) ? 'Remove from Wishlist' : 'Add to Wishlist';
+        wishBtn.onclick = (e) => { e.preventDefault(); toggleWishlist(id, null); if(currentUser){ wishBtn.textContent = getUserWishlist().includes(id) ? 'Remove from Wishlist' : 'Add to Wishlist'; } };
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function showDisclaimer(productId){
+      const modal = document.getElementById('disclaimer-modal');
+      if(!modal) return;
+      const txt = 'This website is a CSS practice project created by a web development learner. It is designed only to demonstrate frontend design, layout, and styling skills. All product names, prices, offers, and content shown are for educational and demonstration purposes only. This is not a real e-commerce website, and no actual purchases or transactions can be made through it.';
+      const textEl = modal.querySelector('.disclaimer-text');
+      if(textEl) textEl.innerHTML = `<p>${txt}</p>`;
+      modal.classList.remove('hidden');
+      if(!modal.dataset.init){
+        modal.dataset.init = '1';
+        const closeBtn = modal.querySelector('.modal-close'); if(closeBtn) closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        const okBtn = modal.querySelector('#disclaimer-ok'); if(okBtn) okBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.add('hidden'); });
+      }
+    }
+
+    function updateAuthUI(){
+      const authBtn = document.getElementById('auth-btn');
+      if(!authBtn) return;
+      authBtn.removeEventListener('click', authBtn._clickHandler);
+      if(currentUser){
+        authBtn.textContent = 'Hi, ' + currentUser;
+        authBtn._clickHandler = (e) => { e.preventDefault(); if(confirm('Sign out?')) clearCurrentUser(); };
+        authBtn.addEventListener('click', authBtn._clickHandler);
+        // show profile button
+        if(profileBtn){ profileBtn.classList.remove('hidden'); profileBtn.querySelector('.profile-name').textContent = currentUser; }
+        if(profileNameDisplay) profileNameDisplay.textContent = currentUser;
+        if(profileDropdown) profileDropdown.setAttribute('aria-hidden','true');
+      } else {
+        authBtn.textContent = 'Sign In';
+        authBtn._clickHandler = (e) => { e.preventDefault(); showAuthModal(); };
+        authBtn.addEventListener('click', authBtn._clickHandler);
+        if(profileBtn){ profileBtn.classList.add('hidden'); }
+      }
+    }
+
+    // show/hide auth modal
+    function showAuthModal(){
+      const m = document.getElementById('auth-modal');
+      if(m) m.classList.remove('hidden');
+    }
+    function hideAuthModal(){ const m = document.getElementById('auth-modal'); if(m) m.classList.add('hidden'); }
+
+    updateAuthUI();
+    updateCartCount();
+    updateWishlistCount();
+
+    // Profile dropdown handlers
+    if(profileBtn){
+      profileBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!currentUser){ showAuthModal(); return; }
+        profileDropdown.classList.toggle('hidden');
+        const hidden = profileDropdown.classList.contains('hidden');
+        profileDropdown.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+      });
+    }
+    if(profileDropdown){
+      const signoutBtn = document.getElementById('profile-signout');
+      if(signoutBtn) signoutBtn.addEventListener('click', (e) => { e.preventDefault(); clearCurrentUser(); profileDropdown.classList.add('hidden'); });
+      
+      const myProfileLink = document.getElementById('profile-myaccount');
+      if(myProfileLink) myProfileLink.addEventListener('click', (e) => { e.preventDefault(); profileDropdown.classList.add('hidden'); showDisclaimer(); });
+      
+      const myOrdersLink = document.getElementById('profile-orders');
+      if(myOrdersLink) myOrdersLink.addEventListener('click', (e) => { e.preventDefault(); profileDropdown.classList.add('hidden'); showDisclaimer(); });
+      
+      profileDropdown.addEventListener('click', (e) => e.stopPropagation());
+    }
+    document.addEventListener('click', (e) => { if(profileDropdown && !e.target.closest('.profile-wrapper')) profileDropdown.classList.add('hidden'); });
+    updateWishlistCount();
+
+    function normalizeText(s){
+      return (s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    }
+
+    function isSubsequence(q, text){
+      // return true if all chars of q appear in order within text (allow gaps)
+      let i = 0, j = 0;
+      while(i < q.length && j < text.length){
+        if(q[i] === text[j]) i++; j++;
+      }
+      return i === q.length;
+    }
+
+    function performSearch(term){
+      const raw = (term||'').trim();
+      const q = normalizeText(raw);
+      if(!q){ renderProducts('all'); return; }
+
+      console.log('performSearch:', raw, q);
+      const results = products.filter(p => {
+        const combined = normalizeText(p.name + ' ' + p.category);
+        if (combined.includes(q)) return true;
+        // token starts-with match (helps short queries)
+        const tokens = (p.name + ' ' + p.category).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+        const normalizedTokens = tokens.map(t => t.replace(/[^a-z0-9]/g, ''));
+        if (normalizedTokens.some(t => t.startsWith(q))) return true;
+        // subsequence fuzzy match e.g. 'os' -> 'processor'
+        if (isSubsequence(q, combined)) return true;
+        return false;
+      });
+
+      productGrid.innerHTML = '';
+      productSectionTitle.innerHTML = `Search results for "<span>${raw}</span>"`;
+      if(results.length === 0){
+        productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted-text);">No products found for your search.</p>';
+        return;
+      }
+
+      results.forEach(prod => {
+        const badgeHtml = prod.badge ? `<span class="product-badge ${prod.badge === 'NEW' ? 'new-badge' : prod.badge === 'SALE' ? 'sale-badge' : ''}">${prod.badge}</span>` : '';
+        const article = document.createElement('article');
+        article.className = 'product-card';
+        article.dataset.id = prod.id;
+        article.innerHTML = `
+          ${badgeHtml}
+          <button class="product-wishlist" data-id="${prod.id}" title="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-image-box">
+            <img src="${prod.image}" alt="${prod.name}">
+          </div>
+          <div class="product-info">
+            <p class="product-category">${prod.category}</p>
+            <h3>${prod.name}</h3>
+            <div class="rating">
+              <span>${'★'.repeat(prod.rating)}${'☆'.repeat(5 - prod.rating)}</span>
+              <small>(${prod.reviews} reviews)</small>
+            </div>
+            <div class="product-bottom">
+              <h4>${prod.price}</h4>
+              <div class="product-actions">
+                <button class="add-to-cart" data-id="${prod.id}"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="buy-now btn btn-primary" data-id="${prod.id}">Buy</button>
+              </div>
+            </div>
+          </div>
+        `;
+        productGrid.appendChild(article);
+        const addBtn = article.querySelector('.add-to-cart');
+        if (addBtn) addBtn.addEventListener('click', (e) => { e.stopPropagation(); addToCart(prod.id); });
+        const wishBtn = article.querySelector('.product-wishlist');
+        if (wishBtn) {
+          try {
+            const userW = currentUser ? getUserWishlist() : [];
+            if (userW && userW.includes(prod.id)) wishBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+            else wishBtn.innerHTML = '<i class="fa-regular fa-heart"></i>'; 
+          } catch (e) {}
+          wishBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleWishlist(prod.id, wishBtn); });
+        }
+        const buyBtn = article.querySelector('.buy-now');
+        if (buyBtn) buyBtn.addEventListener('click', (e) => { e.stopPropagation(); showDisclaimer(prod.id); });
+        article.addEventListener('click', () => openProductDetail(prod.id));
+      });
+    }
+    ;
+
+    const wishlistModalBtn = document.querySelector('.wishlist-modal');
+    if (wishlistModalBtn) {
+      wishlistModalBtn.addEventListener('click', () => {
+        const id = Number(document.getElementById('product-modal').dataset.currentId);
+        const btn = document.querySelector(`.product-wishlist[data-id='${id}']`);
+        toggleWishlist(id, btn || wishlistModalBtn);
+      });
+    }
+
+    // Auth modal handlers
+    const authModal = document.getElementById('auth-modal');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const showLoginBtn = document.getElementById('show-login');
+    const showRegisterBtn = document.getElementById('show-register');
+    const authMsg = document.getElementById('auth-msg');
+
+    function switchAuthTab(tab){
+      if(tab === 'login'){
+        loginForm.classList.remove('hidden'); registerForm.classList.add('hidden'); showLoginBtn.classList.add('active'); showRegisterBtn.classList.remove('active');
+      } else {
+        loginForm.classList.add('hidden'); registerForm.classList.remove('hidden'); showLoginBtn.classList.remove('active'); showRegisterBtn.classList.add('active');
+      }
+      authMsg.textContent = '';
+    }
+
+    if(showLoginBtn) showLoginBtn.addEventListener('click', () => switchAuthTab('login'));
+    if(showRegisterBtn) showRegisterBtn.addEventListener('click', () => switchAuthTab('register'));
+
+    // close button inside modal
+    const authClose = authModal ? authModal.querySelector('.modal-close') : null;
+    if(authClose) authClose.addEventListener('click', () => hideAuthModal());
+    if(authModal) authModal.addEventListener('click', (e) => { if(e.target === authModal) hideAuthModal(); });
+
+    if(registerForm) registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const u = document.getElementById('reg-username').value.trim();
+      const p = document.getElementById('reg-password').value;
+      if(!u || !p){ authMsg.textContent = 'Enter username and password'; return; }
+      const users = getUsers();
+      if(users.find(x => x.username === u)){ authMsg.textContent = 'Username already taken'; return; }
+      users.push({ username: u, password: p }); saveUsers(users); setCurrentUser(u); hideAuthModal();
+    });
+
+    if(loginForm) loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const u = document.getElementById('login-username').value.trim();
+      const p = document.getElementById('login-password').value;
+      if(!u || !p){ authMsg.textContent = 'Enter username and password'; return; }
+      const users = getUsers();
+      const found = users.find(x => x.username === u && x.password === p);
+      if(!found){ authMsg.textContent = 'Invalid credentials'; return; }
+      setCurrentUser(u); hideAuthModal();
+    });
+
+    const topWishlistLink = document.querySelector('.wishlist-link');
+    if (topWishlistLink) {
+      topWishlistLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!currentUser){ showAuthModal(); return; }
+        showPanel('wishlist');
+      });
+    }
+
+    const topCartLink = document.querySelector('.cart-icon');
+    if (topCartLink) {
+      topCartLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!currentUser){ showAuthModal(); return; }
+        showPanel('cart');
+      });
+    }
+
+    function renderPanel(type){
+      const panel = document.getElementById('panel-modal');
+      const panelTitle = document.getElementById('panel-title');
+      const panelBody = document.getElementById('panel-body');
+      if(!panel || !panelTitle || !panelBody) return;
+      panelTitle.textContent = type === 'cart' ? 'Your Cart' : 'Your Wishlist';
+      panelBody.innerHTML = '';
+      let items = [];
+      if(type === 'cart'){
+        items = normalizeCartItems(getUserCart());
+      } else {
+        items = normalizeCartItems(getUserWishlist());
+      }
+      if(items.length === 0){
+        panelBody.innerHTML = '<p style="color: var(--muted-text); padding: 20px;">No items yet.</p>';
+        return;
+      }
+      items.forEach(item => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'panel-item';
+        itemEl.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" />
+          <div>
+            <h4>${item.name}</h4>
+            <p>${item.price}</p>
+          </div>
+          <button class="panel-remove" data-id="${item.id}">Remove</button>
+        `;
+        panelBody.appendChild(itemEl);
+        const removeBtn = itemEl.querySelector('.panel-remove');
+        if(removeBtn){
+          removeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(type === 'cart') removeFromCart(item.id);
+            else removeFromWishlist(item.id);
+          });
+        }
+      });
+    }
+
+    function showPanel(type){
+      activePanelType = type;
+      renderPanel(type);
+      updateWishlistCount();
+      const panel = document.getElementById('panel-modal');
+      if(panel) panel.classList.remove('hidden');
+    }
+
+    const panelModal = document.getElementById('panel-modal');
+    if(panelModal){
+      const panelClose = panelModal.querySelector('.modal-close');
+      if(panelClose) panelClose.addEventListener('click', () => panelModal.classList.add('hidden'));
+      panelModal.addEventListener('click', (e) => { if(e.target === panelModal) panelModal.classList.add('hidden'); });
+    }
+
+    // Product modal close handling (overlay click and X button)
+    const productModalEl = document.getElementById('product-modal');
+    if (productModalEl) {
+      const prodClose = productModalEl.querySelector('.modal-close');
+      if (prodClose) prodClose.addEventListener('click', () => productModalEl.classList.add('hidden'));
+      productModalEl.addEventListener('click', (e) => { if (e.target === productModalEl) productModalEl.classList.add('hidden'); });
+    }
+
+    renderCategories();
+    renderProducts('trending');
+  </script>
+</body>
+</html>

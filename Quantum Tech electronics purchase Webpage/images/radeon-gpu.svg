@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" rx="24" fill="#0f172a"/>
-  <rect x="30" y="30" width="340" height="240" rx="30" fill="#111827"/>
-  <circle cx="180" cy="150" r="50" fill="#e11d48" opacity="0.95"/>
-  <circle cx="230" cy="150" r="50" fill="#f97316" opacity="0.8"/>
-  <rect x="90" y="210" width="220" height="40" rx="12" fill="#1e293b"/>
-  <text x="200" y="228" fill="#f8fafc" font-family="Poppins, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Radeon</text>
-  <text x="200" y="250" fill="#94a3b8" font-family="Poppins, sans-serif" font-size="14" text-anchor="middle">RX 7800 XT</text>
-</svg>

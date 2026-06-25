@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="24" fill="#0f172a"/>
+  <rect x="70" y="60" width="260" height="180" rx="26" fill="#111827"/>
+  <rect x="90" y="90" width="220" height="120" rx="16" fill="#38bdf8"/>
+  <rect x="120" y="110" width="160" height="80" rx="10" fill="#0ea5e9"/>
+  <rect x="90" y="210" width="220" height="20" rx="10" fill="#0f172a"/>
+  <text x="200" y="150" fill="#e2e8f0" font-family="Poppins, sans-serif" font-size="22" font-weight="700" text-anchor="middle">NVMe</text>
+  <text x="200" y="175" fill="#cbd5e1" font-family="Poppins, sans-serif" font-size="14" text-anchor="middle">4TB SSD</text>
+</svg>

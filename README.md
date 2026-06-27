@@ -17,7 +17,7 @@ QuantumTech showcases a professional web interface designed to represent a moder
 
 ## 🚀 Live Demo
 View the live QuantumTech site here:
-👉 [https://quantum-tech-css-html-project-kamesh.netlify.app/] (https://quantumtech-css-html-project-kamesh.netlify.app/#products)
+👉 https://quantumtech-css-html-project-kamesh.netlify.app/#products
 ## 🛠 Technical Highlights
 This project highlights core web development practices:
 
